@@ -9,6 +9,12 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+/* German umlauts */
+ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+ZMK_UNICODE_PAIR(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+ZMK_UNICODE_PAIR(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+ZMK_UNICODE_PAIR(de_eszett,     N0, N0,  D,  F,    N1, E,   N9, E)
+
 / {
     behaviors {
         ht: hold_tap {
@@ -36,13 +42,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Z       │  y       │  U       │  A       │  Q       │   │  P       │  B       │  M       │  L       │  F       │
-            &mt J Z      &kp Y      &kp U      &kp A      &kp Q          &kp P      &kp B      &kp M      &kp L      &mt ß F
+            &mt J Z      &kp Y      &kp U      &kp A      &kp Q          &kp P      &kp B      &kp M      &kp L   &mt &de_eszett F
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  C       │  S       │  I       │  E       │  O       │   │  D       │  T       │  N       │  R       │   H      │
             HRML(C,        S,         I,         E)     &kp O          &kp D      HRMR(T,        N,         R,        H)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  V       │  X       │  Ü       │  Ä       │  Ö       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp V      &kp X      &kp Ü      &kp Ö      &kp Ö          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //│  V       │  X       │  Ü       │  Ä       │  Ö       │   │  N       │  M       │ , <      │ . >      │ K        │
+            &kp V      &kp X     &kp &de_ue &kp &de_ae &kp &de_oe      &kp N      &kp M      &kp COMMA  &kp DOT    &kp K
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
