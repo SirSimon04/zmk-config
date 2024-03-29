@@ -1,12 +1,9 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
-#define HOST_OS 2  
-#include helper.h
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <./german.dtsi>
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -39,13 +36,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Z       │  y       │  U       │  A       │  Q       │   │  P       │  B       │  M       │  L       │  F       │
-            &mt J Z      &kp Y      &kp U      &kp A      &kp Q          &kp P      &kp B      &kp M      &kp L   &mt &de_eszett F
+            &mt J Z      &kp Y      &kp U      &kp A      &kp Q          &kp P      &kp B      &kp M      &kp L   &kp F
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  C       │  S       │  I       │  E       │  O       │   │  D       │  T       │  N       │  R       │   H      │
             HRML(C,        S,         I,         E)     &kp O          &kp D      HRMR(T,        N,         R,        H)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  V       │  X       │  Ü       │  Ä       │  Ö       │   │  N       │  M       │ , <      │ . >      │ K        │
-            &kp V      &kp X     &kp &de_ue &kp &de_ae &kp &de_oe      &kp N      &kp M      &kp COMMA  &kp DOT    &kp K
+            &kp V      &kp X     &kp U       &kp A     &kp O          &kp N      &kp M      &kp COMMA  &kp DOT    &kp K
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
