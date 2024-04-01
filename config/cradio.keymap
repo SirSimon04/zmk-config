@@ -43,7 +43,7 @@
             HRML(C,        S,         I,         E)     &kp O          &kp D      HRMR(T,        N,         R,        H)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  V       │  X       │  Ü       │  Ä       │  Ö       │   │  N       │  M       │ , <      │ . >      │ K        │
-            &kp V      &kp X     &mt COLON DE_U_UMLAUT &mt SEMI DE_A_UMLAUT &mt KP_EQUAL DE_O_UMLAUT &kp N      &kp M      &kp COMMA  &kp DOT    &kp K
+            &kp V      &kp X     &mt A DE_U_UMLAUT &mt SEMI DE_A_UMLAUT &mt KP_EQUAL DE_O_UMLAUT &kp N      &kp M      &kp COMMA  &kp DOT    &kp K
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
