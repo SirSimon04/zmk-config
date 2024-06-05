@@ -55,13 +55,13 @@
         // zeichen
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ trans    │  _       │  [       │  ]       │ ^        │   │ !        │ <        │ >        │ =        │  &       │
-            &kp INS    &kp DE_UNDER &kp DE_RBKT &kp DE_LBKT &kp DE_CARET &kp DE_EXCL &kp DE_LT  &kp DE_LT  &kp DE_EQUAL &kp DE_AMPS  
+            &kp INS    &kp DE_UNDER &kp DE_LBKT &kp DE_RBKT &trans  &kp DE_EXCL &kp DE_LT  &kp DE_GT  &kp DE_EQUAL &kp DE_AMPS  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ \        │  /       │  {       │  }       │   *      │   │ ?        │ (        │ )        │ -        │  @       │
            &kp DE_BSLH &kp DE_SLASH &kp DE_LBRC &kp DE_RBRC &kp DE_ASTRK   &kp DE_QMARK &kp DE_LPAR &kp DE_RPAR &kp DE_MINUS &kp DE_AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ #        │  $       │  |       │  ~       │  `       │   │  +       │   %      │  "       │  '       │          │
-         &kp DE_HASH  &kp DE_DOLLAR  &kp DE_PIPE  &kp DE_TILDE &kp DE_ACUTE &kp DE_PLUS &kp DE_PRCNT     &kp DE_DQT     &kp DE_SQT &trans   
+         &kp DE_HASH  &kp DE_DOLLAR  &kp DE_PIPE  &kp DE_TILDE &kp DE_ACUTE &kp DE_PLUS &kp DE_PRCNT &kp DE_DQT &kp DE_SQT &kp DE_GRAVE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -70,16 +70,15 @@
 
         left_layer {
             bindings = <
-        // rechts pfeiltasten auf vim keys, links dann vllt zahlen?
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │          │          │          │          │   │          │  7       │  8       │  9       │          │
+             &trans     &trans     &trans     &trans     &trans        &trans    &kp DE_N7  &kp DE_N8 &kp DE_N9   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│          │          │          │          │          │   │          │  4       │  5       │  6       │          │
+             &trans     &trans     &trans     &trans     &trans       &trans     &kp DE_N4  &kp DE_N5  &kp DE_N6   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │          │          │          │          │   │  0       │  1       │  2       │  3       │          │
+            &trans     &trans     &trans     &trans     &trans         &kp DE_N0 &kp DE_N1  &kp DE_N2   &kp DE_N3   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
